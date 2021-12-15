@@ -15,7 +15,7 @@
         }
         body{
             font-family: 'Roboto', sans-serif;
-            background-color: #000000;
+            background-color: #131313;
 
             color: #fff;
         }
@@ -160,44 +160,59 @@
             <div class="display">
                 <span>
                     <h2>Cronômetro</h2>
-                    <span class="numero" id="timer">1</span>
+                    <span class="numero" id="timer">00</span>
                 </span>
                 <span>
                     <h2>Contador</h2>
-                    <span class="numero">1</span>
+                    <span class="numero" id="count">1</span>
                 </span>
             </div>
 
-            <button onclick="iniciar()">INICIAR</button>
+            <button onclick="start()">INICIAR</button>
         </div>
     </div>
 
     <script>       
+        var min = 1,
+			seg = 1;
 
-        function contar(duration, display){
-            var timer = duration, seconds;
+        var contador = 1;
 
-            setInterval(function(){                
-                seconds = parseInt(timer % 45, 10);
-                
-                seconds = seconds < 10 ? "0" + seconds: seconds;
+        function start() {
 
-                display.textContent = seconds;
-
-                if(--timer < 0){
-                    timer = duration;                    
-                }
-            }, 1000)
+            if((min == 1) && (seg == 1)){
+                relogio()
+            }
         }
 
-        function iniciar(){
-            var duration = 60 * 1;
+        function relogio(){		
 
-            display = document.querySelector('#timer');
-
-            contar(duration, display);
-            
-        }
+            if((min > 0) || (seg > 0)){				
+                if(seg == 0){					
+                    seg = 5;					
+                    min = min - 1	
+                }				
+                else{					
+                    seg = seg - 1;				
+                }				
+                if(min.toString().length == 1){					
+                    min = "0" + min;				
+                }				
+                if(seg.toString().length == 1){					
+                    seg = "0" + seg;				
+                }				
+                document.getElementById('timer').innerHTML = seg;				
+                setTimeout('relogio()', 1000);		
+                setCookie('tempo',min + ":" + seg,30)
+            }			
+            else{				
+                document.getElementById('timer').innerHTML = "00";
+                contador = contador + 1;	
+                document.getElementById('count').innerHTML = contador;
+                min = 1;
+                seg = 1;	
+            }		
+        }	
     </script>
 </body>
 </html>
