@@ -5,6 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treino</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            background-color: #000000;
+
+            color: #fff;
+        }
+
+        .container{
+            display: grid;
+            grid-template-rows: .5fr 1.5fr 1fr;
+
+            gap: 20px;
+        }
+
+        header{
+            position: relative;
+            top: 10px;
+        }
+
+        header, .treino{
+            background-color: #064663;
+            width: 90vw;
+
+            border-radius: 20px;
+
+            margin: 0 auto;
+
+            align-items: center;
+        }
+
+        header h1{            
+            text-align: center;  
+        }
+
+        .treino{
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            background-color: #064663;
+
+            text-align: center;
+
+            padding: 10px;
+        }
+
+        .treino h2{
+            border-bottom: 2px solid #fff;
+        }
+
+        .itens{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            margin: 0 auto;
+        }       
+
+        .cronometro{
+            background-color: #F0A500;
+
+            width: 90vw;
+
+            border-radius: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            margin: 0 auto;
+
+            padding: 10px;
+        }
+
+        .cronometro button{
+            background-color: #C84B31;
+            color: #fff;
+            border: none;
+
+            font-weight: 700;
+
+            width: 20vw;
+            height: 5vh;
+
+            border-radius: 15px;
+
+            cursor: pointer;
+        }
+
+        .cronometro .display span{
+            display: flex;
+
+            justify-content: space-around;
+        }
+
+        .cronometro .display h2{
+            color: #082032;
+
+            font-weight: 400;
+
+            margin-right: 20px;
+        }
+
+        .cronometro .display .numero{
+            background-color: #041C32;
+
+            font-weight: 700;
+            
+            width: 10vw;
+            height: 5vh;
+
+            align-items: center;
+
+            border-radius: 10px;
+        }
+
+    </style>
+    
 </head>
 <body>
     <div class="container">
@@ -16,17 +139,19 @@
         <div class="treino">
             <h2>Suplino Inclinado Livre</h2>
 
-            <div class="item">
-                <h3>Regulagem</h3>
-                <p></p>
-            </div>
-            <div class="item">
-                <h3>Serie</h3>
-                <p>3x8</p>
-            </div>
-            <div class="item">
-                <h3>Carga</h3>
-                <p>12/12</p>
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>12/12</p>
+                </div>
             </div>
         </div>
 
@@ -34,12 +159,12 @@
         <div class="cronometro">
             <div class="display">
                 <span>
-                    <h2>cronometro</h2>
-                    <span>1</span>
+                    <h2>Cronômetro</h2>
+                    <span class="numero">1</span>
                 </span>
                 <span>
-                    <h2>contador</h2>
-                    <span>1</span>
+                    <h2>Contador</h2>
+                    <span class="numero">1</span>
                 </span>
             </div>
 
