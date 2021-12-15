@@ -160,7 +160,7 @@
             <div class="display">
                 <span>
                     <h2>Cronômetro</h2>
-                    <span class="numero">1</span>
+                    <span class="numero" id="timer">1</span>
                 </span>
                 <span>
                     <h2>Contador</h2>
@@ -168,8 +168,36 @@
                 </span>
             </div>
 
-            <button>INICIAR</button>
+            <button onclick="iniciar()">INICIAR</button>
         </div>
     </div>
+
+    <script>       
+
+        function contar(duration, display){
+            var timer = duration, seconds;
+
+            setInterval(function(){                
+                seconds = parseInt(timer % 45, 10);
+                
+                seconds = seconds < 10 ? "0" + seconds: seconds;
+
+                display.textContent = seconds;
+
+                if(--timer < 0){
+                    timer = duration;                    
+                }
+            }, 1000)
+        }
+
+        function iniciar(){
+            var duration = 60 * 1;
+
+            display = document.querySelector('#timer');
+
+            contar(duration, display);
+            
+        }
+    </script>
 </body>
 </html>
