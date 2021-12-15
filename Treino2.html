@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino 1</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            background-color: #131313;
+
+            color: #fff;
+        }
+
+        .container{
+            display: grid;
+            grid-template-rows: .5fr 1.5fr 1fr;
+
+            gap: 20px;
+        }
+
+        header{
+            position: relative;
+            top: 10px;
+        }
+
+        header, .treino{
+            background-color: #334756;
+            width: 90vw;
+
+            border-radius: 20px;
+
+            margin: 0 auto;
+
+            align-items: center;
+        }
+
+        header h1{            
+            text-align: center;  
+        }
+
+        .treino{
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+
+            text-align: center;
+
+            padding: 10px;
+        }
+
+        .treino:nth-child(even){
+            background-color: #082032;
+        }
+
+        .treino h2{
+            border-bottom: 2px solid #fff;
+        }
+
+        .itens{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            margin: 0 auto;
+        }       
+
+        .cronometro{
+            background-color: #F0A500;
+
+            width: 90vw;
+
+            border-radius: 20px;
+
+            display: flex;            
+            align-items: center;
+            justify-content: space-around;
+
+            margin: 0 auto;
+
+            padding: 10px;
+        }
+
+        .cronometro button{
+            background-color: #C84B31;
+            color: #fff;
+            border: none;
+
+            font-weight: 700;
+
+            width: 20vw;
+            height: 5vh;
+
+            border-radius: 15px;
+
+            cursor: pointer;
+        }
+
+        .cronometro .display span{
+            display: flex;
+
+            justify-content: space-around;
+        }
+
+        .cronometro .display h2{
+            color: #082032;
+
+            font-weight: 400;
+
+            margin-right: 20px;
+        }
+
+        .cronometro .display .numero{
+            background-color: #041C32;
+
+            font-weight: 700;
+            
+            width: 10vw;
+            height: 5vh;
+
+            align-items: center;
+
+            border-radius: 10px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MEU TREINO</h1>
+        </header>
+
+        <!-- treino -->
+        <div class="treino">
+            <h2>Puxada Fechada Livre</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>s/c</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Remada Sentada</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>32</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Puxada Fronta/Barra Grande</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>32</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Crucifixo Invertido/Aparelho</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>B4/E3</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>7</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Remada Alta no C.O.</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>25</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Desenv. Ombros/Halter</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>12</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Abdução Ombros/escapula</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>8</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Bíceps Simultâneo/Halter</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>10</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Bíceps Martelo/Halter</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>ALTERNADO</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>10</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Bíceps/C.O/Barrinha</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>15</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Abdominal Remador</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>s/c</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="treino">
+            <h2>Abdominal Supra Bozu</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Regulagem</h3>
+                    <p>0</p>
+                </div>
+                <div class="item">
+                    <h3>Serie</h3>
+                    <p>3x8</p>
+                </div>
+                <div class="item">
+                    <h3>Carga</h3>
+                    <p>s/c</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- cronometro -->
+        <div class="cronometro">
+            <div class="display">
+                <span>
+                    <h2>Cronômetro</h2>
+                    <span class="numero" id="timer">00</span>
+                </span>
+                <span>
+                    <h2>Contador</h2>
+                    <span class="numero" id="count">1</span>
+                </span>
+            </div>
+
+            <button onclick="start()">INICIAR</button>
+        </div>
+    </div>
+
+    <script>       
+        var min = 1,
+			seg = 1;
+
+        var contador = 1;
+
+        function start() {
+
+            if((min == 1) && (seg == 1)){
+                relogio()
+            }
+        }
+
+        function relogio(){		
+
+            if((min > 0) || (seg > 0)){				
+                if(seg == 0){					
+                    seg = 5;					
+                    min = min - 1	
+                }				
+                else{					
+                    seg = seg - 1;				
+                }				
+                if(min.toString().length == 1){					
+                    min = "0" + min;				
+                }				
+                if(seg.toString().length == 1){					
+                    seg = "0" + seg;				
+                }				
+                document.getElementById('timer').innerHTML = seg;				
+                setTimeout('relogio()', 1000);		
+                setCookie('tempo',min + ":" + seg,30)
+            }			
+            else{				
+                document.getElementById('timer').innerHTML = "00";
+                contador = contador + 1;	
+                document.getElementById('count').innerHTML = contador;
+
+                if(contador == 3){
+                    contador = 0;
+                }
+                min = 1;
+                seg = 1;	
+            }		
+        }	
+    </script>
+</body>
+</html>
